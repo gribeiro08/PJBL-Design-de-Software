@@ -1,34 +1,25 @@
 package Controller;
-
+import Model.LampadaModel;
 import View.LampadaView;
 
+// Classe Controller - Padrão MVC.
 public class LampadaController {
-    private LampadaFacade facade;
+    private LampadaModel model;
     private LampadaView view;
 
-    public LampadaController() {
-        facade = new LampadaFacade();
-        view = new LampadaView();
+    public LampadaController(LampadaModel model, LampadaView view) {
+        this.model = model;
+        this.view = view;
     }
 
-    public void acenderLampada() {
-        facade.acenderLampada();
+    public void ligarLampada() {
+        model.ligar();
+        view.mostrarEstadoLampada(model.getCor(), true);
     }
 
-    public void apagarLampada() {
-        facade.apagarLampada();
-    }
-
-    public void definirCorLampada(String cor) {
-        facade.definirCorLampada(cor);
-    }
-
-    public void definirIntensidadeLampada(int intensidade) {
-        facade.definirIntensidadeLampada(intensidade);
-    }
-
-    public void mostrarLampada() {
-        view.mostrarLampada(facade.getLampada());
+    public void desligarLampada() {
+        model.desligar();
+        view.mostrarEstadoLampada(model.getCor(), false);
     }
 }
 

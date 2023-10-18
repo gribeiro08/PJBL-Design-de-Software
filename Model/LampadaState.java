@@ -1,57 +1,32 @@
 package Model;
 
-public interface LampadaState {
-    void acender(Lampada lampada);
-    void apagar(Lampada lampada);
-    void definirCor(Lampada lampada, String cor);
-    void definirIntensidade(Lampada lampada, int intensidade);
+// Padrão State: Estado da lâmpada.
+interface EstadoLampada {
+    void ligar();
+    void desligar();
 }
 
-class LampadaDesligada implements LampadaState {
+class LampadaDesligada implements EstadoLampada {
     @Override
-    public void acender(Lampada lampada) {
-        System.out.println("Acendendo a lâmpada.");
-        lampada.setEstado(new LampadaAcesa());
+    public void ligar() {
+        System.out.println("Ligando a lâmpada.");
     }
 
     @Override
-    public void apagar(Lampada lampada) {
-        System.out.println("A lâmpada já está apagada.");
-    }
-
-    @Override
-    public void definirCor(Lampada lampada, String cor) {
-        System.out.println("A lâmpada está apagada. Não é possível definir a cor.");
-    }
-
-    @Override
-    public void definirIntensidade(Lampada lampada, int intensidade) {
-        System.out.println("A lâmpada está apagada. Não é possível definir a intensidade.");
+    public void desligar() {
+        System.out.println("A lâmpada já está desligada.");
     }
 }
 
-class LampadaAcesa implements LampadaState {
+class LampadaLigada implements EstadoLampada {
     @Override
-    public void acender(Lampada lampada) {
-        System.out.println("A lâmpada já está acesa.");
+    public void ligar() {
+        System.out.println("A lâmpada já está ligada.");
     }
 
     @Override
-    public void apagar(Lampada lampada) {
-        System.out.println("Apagando a lâmpada.");
-        lampada.setEstado(new LampadaDesligada());
-    }
-
-    @Override
-    public void definirCor(Lampada lampada, String cor) {
-        lampada.setCor(cor);
-        System.out.println("Cor definida como " + cor);
-    }
-
-    @Override
-    public void definirIntensidade(Lampada lampada, int intensidade) {
-        lampada.setIntensidade(intensidade);
-        System.out.println("Intensidade definida como " + intensidade);
+    public void desligar() {
+        System.out.println("Desligando a lâmpada.");
     }
 }
 
