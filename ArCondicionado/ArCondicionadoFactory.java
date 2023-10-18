@@ -1,8 +1,8 @@
-package Lampadas;
+package ArCondicionado;
 
 import General.State;
 
-class LampadaStateFactory {
+class ArCondicionadoFactory {
     private static final State LIGADA = new LigadaState();
     private static final State DESLIGADA = new DesligadaState();
 

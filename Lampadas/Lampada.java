@@ -1,11 +1,13 @@
 package Lampadas;
 // Classe Lampada
 
+import General.State;
+
 class Lampada {
     private String nome;
     private String cor;
     private int intensidade;
-    private EstadoLampada estado;
+    private State estado;
 
     public Lampada(String nome, String cor) {
         this.nome = nome;

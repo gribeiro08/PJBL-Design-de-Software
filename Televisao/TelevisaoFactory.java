@@ -1,8 +1,8 @@
-package Lampadas;
+package Televisao;
 
 import General.State;
 
-class LampadaStateFactory {
+class TelevisaoFactory {
     private static final State LIGADA = new LigadaState();
     private static final State DESLIGADA = new DesligadaState();
 

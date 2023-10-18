@@ -1,15 +1,15 @@
-package Lampadas;
+package Televisao;
 
 import General.State;
 
 class LigadaState implements State {
     @Override
     public void ligar() {
-        System.out.println("A lâmpada já está ligada.");
+        System.out.println("A televisão já está ligada.");
     }
 
     @Override
     public void desligar() {
-        System.out.println("Desligando a lâmpada.");
+        System.out.println("Desligandoa televisão.");
     }
 }

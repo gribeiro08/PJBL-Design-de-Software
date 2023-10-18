@@ -22,9 +22,11 @@ public class LampadaFacade {
     }
 
     public void mostrarLampadas() {
+        System.out.println("\nLampadas:");
         for (Lampada lam : this.lampadas) {
             lam.mostrarStatus();
         }
+        System.out.println("\n");
     }
 
     private Lampada escolherLamapada(int qualLam) {

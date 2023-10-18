@@ -1,6 +1,7 @@
-package Lampadas;
+package General;
+
 // State: Define os estados possíveis da lâmpada
-interface EstadoLampada {
+public interface State {
     void ligar();
     void desligar();
 }

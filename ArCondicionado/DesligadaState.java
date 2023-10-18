@@ -1,15 +1,15 @@
-package Lampadas;
+package ArCondicionado;
 
 import General.State;
 
 class DesligadaState implements State{
     @Override
     public void ligar() {
-        System.out.println("Ligando a lâmpada.");
+        System.out.println("Ligando o ar-condicionado.");
     }
 
     @Override
     public void desligar() {
-        System.out.println("A lâmpada já está desligada.");
+        System.out.println("O ar-condicionado já está desligada.");
     }
 }
