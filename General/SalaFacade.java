@@ -24,6 +24,7 @@ public class SalaFacade {
     }
 
     public void prepararSala(){
+        System.out.println("Preparando sala");
         ligarLampadas();
         ligarTelevisoes();     
     }

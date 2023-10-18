@@ -34,6 +34,7 @@ public class QuartoFacade {
     }
 
     public void prepararQuarto(){
+        System.out.println("Preparando quarto");
         ligarLampadas();
         ligarArCondicionado();
         ligarTelevisoes();        
