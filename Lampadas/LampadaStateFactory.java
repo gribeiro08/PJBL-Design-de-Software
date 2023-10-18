@@ -1,5 +1,5 @@
+package Lampadas;
 
-// Flyweight: Classe compartilhada entre as instâncias de lâmpadas
 class LampadaStateFactory {
     private static final EstadoLampada LIGADA = new LigadaState();
     private static final EstadoLampada DESLIGADA = new DesligadaState();

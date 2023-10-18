@@ -1,3 +1,4 @@
+package Lampadas;
 class DesligadaState implements EstadoLampada {
     @Override
     public void ligar() {

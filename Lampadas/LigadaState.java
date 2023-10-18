@@ -1,3 +1,4 @@
+package Lampadas;
 class LigadaState implements EstadoLampada {
     @Override
     public void ligar() {

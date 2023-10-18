@@ -1,11 +1,13 @@
+package Lampadas;
 // Facade: Fornecer uma interface única para modificar as lâmpadas
-class LampadaFacade {
+
+public class LampadaFacade {
     private Lampada[] lampadas;
 
-    public LampadaFacade() {
-        this.lampadas = new Lampada[4];
+    public LampadaFacade(int size) {
+        this.lampadas = new Lampada[size];
 
-        for(int i = 0; i < 4; i++) {
+        for(int i = 0; i < size; i++) {
             String nome = "Lampada" + i;
             this.lampadas[i] = new Lampada(nome, "Branca");
         }

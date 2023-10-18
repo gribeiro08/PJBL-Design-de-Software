@@ -1,4 +1,6 @@
+package Lampadas;
 // Classe Lampada
+
 class Lampada {
     private String nome;
     private String cor;
