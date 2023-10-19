@@ -50,7 +50,7 @@ class Televisao {
 
     public void criarTV() {
         try {
-            String sql = "INSERT INTO lampada (nome, canal, volume, estado) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO televisao (nome, canal, volume, estado) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = databaseConnection.prepareStatement(sql);
             statement.setString(1, this.nome);
             statement.setInt(2, this.canal);
@@ -64,7 +64,7 @@ class Televisao {
 
     public void atualizarTV() {
         try {
-            String sql = "UPDATE lampada SET canal = ?, volume = ?, estado = ? WHERE nome = ?";
+            String sql = "UPDATE televisao SET canal = ?, volume = ?, estado = ? WHERE nome = ?";
             PreparedStatement statement = databaseConnection.prepareStatement(sql);
             statement.setInt(1, this.canal);
             statement.setInt(2, this.volume);
