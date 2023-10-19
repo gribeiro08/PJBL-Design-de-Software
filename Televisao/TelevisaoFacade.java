@@ -17,8 +17,10 @@ public class TelevisaoFacade {
         Televisao televisao = escolherTelevisao(qualTV - 1);
 
         televisao.ligar();
+        televisao.criarTV();
         televisao.alterarCanal(canal);
         televisao.alterarVolume(volume);
+        televisao.atualizarTV();
         
     }
 

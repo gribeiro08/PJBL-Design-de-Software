@@ -17,8 +17,10 @@ public class LampadaFacade {
         Lampada lamapada = escolherLamapada(qualLam - 1);
 
         lamapada.ligar();
+        lamapada.criarLampada();
         lamapada.alterarCor(cor);
         lamapada.alterarIntensidade(intensidade);
+        lamapada.atualizarLampada();
     }
 
     public void mostrarLampadas() {

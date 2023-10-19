@@ -3,8 +3,8 @@ package ArCondicionado;
 import General.State;
 
 class ArCondicionadoFactory {
-    private static final State LIGADA = new LigadaState();
-    private static final State DESLIGADA = new DesligadaState();
+    private static final State LIGADA = new ArOnState();
+    private static final State DESLIGADA = new ArOffState();
 
     public static State getLigadaState() {
         return LIGADA;

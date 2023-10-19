@@ -2,7 +2,7 @@ package Lampadas;
 
 import General.State;
 
-class DesligadaState implements State{
+class LampOffState implements State{
     @Override
     public void ligar() {
         System.out.println("Ligando a lâmpada.");

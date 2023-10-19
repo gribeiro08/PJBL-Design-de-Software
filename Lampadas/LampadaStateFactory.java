@@ -3,8 +3,8 @@ package Lampadas;
 import General.State;
 
 class LampadaStateFactory {
-    private static final State LIGADA = new LigadaState();
-    private static final State DESLIGADA = new DesligadaState();
+    private static final State LIGADA = new LampOnState();
+    private static final State DESLIGADA = new LampOffState();
 
     public static State getLigadaState() {
         return LIGADA;

@@ -14,10 +14,12 @@ public class ArCondicionadoFacade {
     }
 
     public void ligarArCondicionado(int qualAr, int temperatura) {
-        ArCondicionado lamapada = escolherArCondicionado(qualAr - 1);
+        ArCondicionado arCondicionado = escolherArCondicionado(qualAr - 1);
 
-        lamapada.ligar();
-        lamapada.alterarTemperatura(temperatura);
+        arCondicionado.ligar();
+        arCondicionado.criarArCondicionado();
+        arCondicionado.alterarTemperatura(temperatura);
+        arCondicionado.atualizarArCondicionado();
         
     }
 
